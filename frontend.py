@@ -10,11 +10,11 @@ st.set_page_config(
 )
 
 # --- Backend API URLs ---
-SCAN_URL = "http://127.0.0.1:8000/scan-email"
-LOGS_URL = "http://127.0.0.1:8000/get-logs"
-RISK_URL = "http://127.0.0.1:8000/calculate-risk"
-THREAT_LOGS_URL = "http://127.0.0.1:8000/get-threat-logs"
-LOGIN_URL = "http://localhost:8000/login"
+SCAN_URL = " https://cyber-shield-sf2e.onrender.com/scan-email"
+LOGS_URL = "https://cyber-shield-sf2e.onrender.com/get-logs"
+RISK_URL = " https://cyber-shield-sf2e.onrender.com/calculate-risk"
+THREAT_LOGS_URL = " https://cyber-shield-sf2e.onrender.com/get-threat-logs"
+LOGIN_URL = " https://cyber-shield-sf2e.onrender.com/login"
 
 # ==============================================================================
 #                      HELPER FUNCTIONS (DEFINED ONCE)
