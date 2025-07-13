@@ -182,13 +182,13 @@ def login():
 def callback(request: FastAPIRequest):
     global creds
     code = request.query_params.get('code')
-    flow = Flow.from_client_secrets_file(CREDENTIALS_FILE, scopes=SCOPES, redirect_uri='https://cyber-shield-sf2e.onrender.com/callback')
+    flow = Flow.from_client_secrets_file(CREDENTIALS_FILE, scopes=SCOPES, redirect_uri='http://cyber-shield-sf2e.onrender.com/callback')
     flow.fetch_token(code=code)
     creds = flow.credentials
     with open(TOKEN_FILE, 'w') as token:
         token.write(creds.to_json())
     print("Tokens fetched and saved to token.json successfully.")
-    return RedirectResponse(" https://cyber-shield-sf2e.onrender.com/?status=auth_success")
+    return RedirectResponse(" http://cyber-shield-sf2e.onrender.com/?status=auth_success")
 
 @app.post("/log-threat", tags=["Threat Agent"])
 def log_threat(alert: ThreatAlert):
