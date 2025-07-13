@@ -174,7 +174,7 @@ def on_shutdown():
 
 @app.get("/login", tags=["Google Auth"])
 def login():
-    flow = Flow.from_client_secrets_file(CREDENTIALS_FILE, scopes=SCOPES, redirect_uri='http://localhost:8000/callback')
+    flow = Flow.from_client_secrets_file(CREDENTIALS_FILE, scopes=SCOPES, redirect_uri='http://cyber-sheils-sf2e.onrender.com/callback')
     authorization_url, _ = flow.authorization_url(access_type='offline', include_granted_scopes='true')
     return RedirectResponse(authorization_url)
 
