@@ -180,17 +180,3 @@ def calculate_risk(request: RiskRequest):
 @app.get("/", tags=["General"])
 def read_root():
     return {"message": "Welcome to the CyberShield API v3 - Production Ready"}
-
-Final Instructions
-
-Edit the code: Paste this into main.py and put your real URLs at the top.
-
-Clean Google Console: Go to your Google Credentials page, delete all old Redirect URIs, and add only one: YOUR_RENDER_BACKEND_URL_HERE/callback.
-
-Push to GitHub: Save the updated main.py and push it to your GitHub repository.
-
-Redeploy Backend: Go to Render and manually deploy the latest commit.
-
-Test: Go to your live Streamlit app and try the login process again.
-
-This unified and consistent use of your URLs will resolve the redirect_uri_mismatch error. I am confident this will be the final fix.
